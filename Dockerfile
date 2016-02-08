@@ -11,4 +11,5 @@ RUN mkdir /flexget
 
 WORKDIR /flexget
 
-CMD ["/usr/bin/flexget", "-c", "/flexget/config.yml", "daemon", "start"]
+#CMD ["/usr/bin/flexget", "-c", "/flexget/config.yml", "daemon", "start"]
+CMD /usr/bin/flexget -c /flexget/config.yml daemon start
