@@ -7,8 +7,8 @@ RUN pip install --quiet --upgrade pip && \
     pip install --quiet --upgrade setuptools && \
     pip install --quiet -I flexget transmissionrpc
 
-RUN mkdir /seedbox
+RUN mkdir /flexget
 
-WORKDIR /seedbox/.flexget
+WORKDIR /flexget
 
 CMD ["/usr/bin/flexget", "-c", "/flexget/config.yml", "daemon", "start"]
