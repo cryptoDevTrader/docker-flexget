@@ -10,3 +10,4 @@ RUN pip install --quiet --upgrade pip && \
 RUN mkdir /flexget
 
 CMD ["/usr/bin/flexget", "-c", "/flexget/config.yml", "daemon", "start"]
+
