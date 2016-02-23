@@ -9,4 +9,4 @@ RUN pip install --quiet --upgrade pip && \
 
 RUN mkdir /flexget
 
-CMD /usr/bin/flexget -c /flexget/config.yml --loglevel info daemon start
+ENTRYPOINT ["/usr/bin/flexget","-c","/flexget/config.yml","--loglevel","info","daemon","start"]
