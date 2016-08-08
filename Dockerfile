@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.4
 
 RUN apk add --update py-pip ca-certificates
 RUN rm -rf /var/cache/apk/*
