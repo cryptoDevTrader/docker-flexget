@@ -1,7 +1,6 @@
 FROM alpine:3.4
 
-RUN apk add --update py-pip ca-certificates
-RUN rm -rf /var/cache/apk/*
+RUN apk add --no-cache py-pip ca-certificates
 
 RUN pip install --quiet --upgrade pip && \
     pip install --quiet --upgrade setuptools && \
