@@ -7,8 +7,8 @@ RUN pip install --quiet --upgrade pip && \
     pip install --quiet -I flexget transmissionrpc
 
 RUN mkdir /flexget
+ADD start.sh /flexget/
 
 WORKDIR /flexget
 
-#ENTRYPOINT ["/usr/bin/flexget","-c","/flexget/config.yml","--loglevel","warning","daemon","start"]
-ENTRYPOINT ["/usr/bin/flexget","-c","/flexget/config.yml","--loglevel","verbose","daemon","start"]
+CMD /flexget/start.sh
